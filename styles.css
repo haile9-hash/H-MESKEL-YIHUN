@@ -851,7 +851,124 @@
         .service-link:hover i {
             transform: translateX(3px);
         }
+         /* Certificates Grid */
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5rem;
+    padding: 1rem;
+}
 
+/* Certificate Card */
+.certificate-card {
+    background: var(--third-bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px var(--card-shadow);
+}
+
+/* Certificate Image */
+.certificate-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.certificate-card:hover .certificate-image {
+    transform: scale(1.05);
+}
+
+/* Certificate Content */
+.certificate-content {
+    padding: 25px;
+}
+
+/* Certificate Title */
+.certificate-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--main-color);
+}
+
+/* Certificate Description */
+.certificate-content p {
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+
+/* View Certificate Link */
+.certificate-link {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+    font-size: 1.5rem;
+}
+
+/* Link Hover */
+.certificate-link:hover {
+    color: var(--secondary-color);
+}
+
+/* External Link Icon */
+.certificate-link i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.certificate-link:hover i {
+    transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .certificates-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .certificate-image {
+        height: 200px;
+    }
+
+    .certificate-content h3 {
+        font-size: 1.6rem;
+    }
+
+    .certificate-content p {
+        font-size: 1.4rem;
+    }
+
+    .certificate-link {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificates-grid {
+        grid-template-columns: 1fr;
+        padding: 0.5rem;
+    }
+
+    .certificate-image {
+        height: 220px;
+    }
+}
         /* Contact Section */
         .contact-form {
             max-width: 70rem;
